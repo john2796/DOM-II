@@ -35,6 +35,13 @@
     <header class="intro">
       <img src="img/fun-bus.jpg" alt="bus in the sand">
       <p id="demo"></p>
+      <div class="drag_drop">
+        <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">This element is draggable.
+          <span>🚌</span>
+        </p>
+
+        <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+      </div>
       <h2>Welcome To Fun Bus!</h2>
       <p>Traveling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty
         design,

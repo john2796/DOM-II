@@ -182,6 +182,9 @@ img {
   position: fixed;
   z-index: 9999;
 }
+.main-navigation .red {
+  background: red;
+}
 .main-navigation .nav-container {
   height: 100%;
   display: flex;
@@ -226,6 +229,20 @@ img {
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+}
+.home .drag_drop {
+  display: flex;
+  justify-content: space-around;
+}
+.home .drag_drop p {
+  width: 150px;
+  height: 150px;
+  border: 1px solid green;
+}
+.home .drag_drop div {
+  width: 150px;
+  height: 150px;
+  border: 1px solid orange;
 }
 .home .intro {
   padding: 90px 0 10px;
