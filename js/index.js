@@ -4,7 +4,6 @@
 // Scroll event 
 const mainNav = document.querySelector('.main-navigation');
 const mainNavAtag = document.querySelectorAll('nav a');
-console.log(mainNavAtag)
 let last_known_scroll_position = 0;
 let ticking = false;
 function doSomething(scroll_pos) {
@@ -34,3 +33,14 @@ window.addEventListener('scroll', function (e) {
     ticking = true;
   }
 });
+
+
+// Resize 
+window.addEventListener('resize', update);
+let x = window.document.querySelector('#demo');
+update();
+
+function update() {
+  x.innerHTML = `Browser inner window width: ${window.innerWidth}
+                 , height: ${window.innerHeight}.`
+}
