@@ -4,6 +4,7 @@
 // Scroll event 
 const mainNav = document.querySelector('.main-navigation');
 let mainNavAtag = document.querySelectorAll('nav a');
+
 let last_known_scroll_position = 0;
 let ticking = false;
 function doSomething(scroll_pos) {
@@ -113,17 +114,9 @@ function getRandomColor() {
   return color;
 }
 
-  // btn.addEventListener('dblclick', function (e) {
-  //   btn.forEach((button) => {
-  //     let random = getRandomColor();
-  //     button.style.background = random
-  //   })
-  // });
-  // function getRandomColor() {
-  //   const letters = '0123456789ABCDEF';
-  //   let color = '#';
-  //   for (let i = 0; i < 6; i++) {
-  //     color += letters[Math.floor(Math.random() * 16)];
-  //   }
-  //   return color;
-  // }
+// prevent default
+mainNavAtag.forEach((aTag) => {
+  aTag.addEventListener('click', function (e) {
+    e.preventDefault();
+  })
+})
