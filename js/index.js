@@ -5,6 +5,13 @@
 const mainNav = document.querySelector('.main-navigation');
 let mainNavAtag = document.querySelectorAll('nav a');
 
+const images = document.querySelectorAll('img');
+TweenMax.from(images, 2, {
+  x: 100,
+  opacity: 0
+})
+
+
 let last_known_scroll_position = 0;
 let ticking = false;
 function doSomething(scroll_pos) {
@@ -21,7 +28,6 @@ function doSomething(scroll_pos) {
     })
     mainNav.style.background = "#FFFFFF";
     mainNav.style.color = "#212529";
-
   }
 }
 window.addEventListener('scroll', function (e) {
@@ -101,6 +107,7 @@ let btn = document.querySelectorAll('.btn');
 btn.forEach((button) => {
   button.addEventListener('click', function () {
     button.style.background = getRandomColor();
+    console.log('color changed!!!')
   })
 })
 
@@ -118,5 +125,18 @@ function getRandomColor() {
 mainNavAtag.forEach((aTag) => {
   aTag.addEventListener('click', function (e) {
     e.preventDefault();
+    console.log(`It's working`)
   })
 })
+// stopPropagation
+
+btn[0].addEventListener('click', function (e) {
+  e.stopPropagation();
+  console.log('Stop Propagation from console logging')
+})
+
+const bus = document.querySelector('.bus');
+TweenMax.to(bus, 1, { x: 1100, })
+TweenMax.to(bus, 1, { y: 800, delay: 1 })
+
+// TweenMax.to(bus, 1, { y: 200, delay: 1 })
