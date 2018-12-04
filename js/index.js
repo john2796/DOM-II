@@ -98,10 +98,10 @@ function drop_handler(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 
-// load
-// window.addEventListener("load", function (event) {
-//   alert("All resources finished loading!");
-// });
+//load
+window.addEventListener("load", function (event) {
+  alert("All resources finished loading!");
+});
 
 let btn = document.querySelectorAll('.btn');
 btn.forEach((button) => {
