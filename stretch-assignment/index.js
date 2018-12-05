@@ -44,7 +44,13 @@
 const blocks = document.querySelectorAll('.block');
 let increment = 0;
 let interval;
+let lastOrder = 0
 Array.from(blocks).map((block) => {
+  block.addEventListener('click', function () {
+    lastOrder -= 1;
+    block.style.order = `${lastOrder}`;
+  })
+
   block.addEventListener('mousedown', function (e) {
     interval = window.setInterval(function () {
       TweenMax.to(block, 0.5, {
